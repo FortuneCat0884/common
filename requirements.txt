@@ -1,4 +1,5 @@
 pyrogram==1.2.11
+aria2p
 tgcrypto==1.2.2
 yt-dlp==2021.12.1
 youtube-dl==2021.6.6
