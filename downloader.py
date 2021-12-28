@@ -122,7 +122,9 @@ def ytdl_download(url, tempdir, bm) -> dict:
         'progress_hooks': [lambda d: download_hook(d, bm)],
         'outtmpl': output,
         'restrictfilenames': False,
-        'quiet': True
+        'quiet': True,
+        'external_downloader': 'aria2c',
+        'external_downloader_args': ['-x', '16', '-k', '1M'],
     }
     formats = [
         "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio",
